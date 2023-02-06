@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <script src="./script.js"></script>
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+   body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(218, 23%, 16%);
+    font-size: 24px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container {
+    height: 225px;
+    width: 375px;
+    background-color: hsl(217, 19%, 24%);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .inner-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .advice-id {
+    color: hsl(150, 100%, 66%);
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  #advice-quote {
+    color: hsl(193, 38%, 86%);
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    transform: translateY(37px);
+  }
+
+  button {
+    background-color: hsl(150, 100%, 66%);
+    border: none;
+    color: hsl(218, 23%, 16%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px hsl(150, 100%, 66%);
+  }
+
+  img {
+    height: 20px;
+    width: 20px;
+  }
+
+  @media (max-width: 500px) {
+    .advice-id {
+      font-size: 10px;
+    }
+
+    body {
+      font-size: 20px;
+    }
+  } 
+
+ 
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="inner-container">
+        <p class="advice-id">
+          Advice #<span id="id"></span>
+        </p>
+        <p id="advice-quote">
+          “<span id="advice"></span>”
+        </p>
+        <div class="button-container">
+          <button id="generate" onclick="fetchAdvice()">
+            <img src="./images/icon-dice.svg" alt="Dice" srcset="">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
